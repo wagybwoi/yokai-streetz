@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>yokai streetz</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+		<link rel=preload as=image href="images/yokai_loading.gif">
+		<link rel=preload as=image href="images/title_1.png">
+		<link rel=preload as=image href="images/title_2.png">
+		<style>
+			body {
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			canvas {
+				width: 100%;
+				height: 100%;
+			}
+
+			#container {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: #000000;
+				transition: 3s;
+			}
+
+			#loading {
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    height: 30vh;
+			    margin-top: -15vh;
+			    margin-left: -15vh;
+
+    			-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+			}
+			
+			#title_1 {
+				opacity: 0;
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    height: 55vw;
+			    margin-top: calc(-28vw - 2vw);
+			    margin-left: -28vw;
+			    outline: 1px solid transparent;
+			    transition: 3s;
+
+			    animation-name: rotato;
+			    animation-duration: 3.5s;
+			    animation-iteration-count: infinite;
+    			animation-timing-function: ease-in-out;
+
+    			-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+			}
+
+			#title_2 {
+				opacity: 0;
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    height: 40vw;
+			    margin-top: calc(-20vw + 8vw);
+			    margin-left: -20vw;
+			    outline: 1px solid transparent;
+			    transition: 3s;
+
+			    animation-name: rotato;
+			    animation-duration: 3.5s;
+			    animation-iteration-count: infinite;
+    			animation-timing-function: ease-in-out;
+				animation-delay: 0.3s;
+
+    			-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+			}
+
+			@keyframes rotato {
+			    0%   { transform: translateZ(1px) scale(1) rotate(-5deg) }
+			    50%  { transform: translateZ(1px) scale(1.2) rotate( 5deg) }
+			    100% { transform: translateZ(1px) scale(1) rotate(-5deg) }
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<img draggable="false" id="loading" src="images/yokai_loading.gif">
+			<img draggable="false" id="title_1" src="images/title_1.png">
+			<img draggable="false" id="title_2" src="images/title_2.png">
+		</div>
+		<canvas id="three"></canvas>
+
+		<script src="lib/three.min.js"></script>
+		<script src="lib/Tween.js"></script>
+
+		<script src="shaders/EffectComposer.js"></script>
+		<script src="shaders/RenderPass.js"></script>
+		<script src="shaders/MaskPass.js"></script>
+		<script src="shaders/ShaderPass.js"></script>
+		<script src="shaders/ClearPass.js"></script>
+		<script src="shaders/CopyShader.js"></script>
+		<script src="shaders/RGBShiftShader.js"></script>
+
+		<script src="lib/spawns.js"></script>
+		<script src="lib/behaviour.js"></script>
+	</body>
+</html>
