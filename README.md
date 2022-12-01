@@ -1,5 +1,5 @@
 # Yokai Streetz
-An audio & visual webGL treat based on Japanese alleyways & folklore.
+An audio & visual webGL experience based on Japanese streets & folklore.
 
 ![alt text](https://github.com/wagybwoi/Yokai-Streetz/blob/master/yokai.gif "YOKAI STREETZ")
 
